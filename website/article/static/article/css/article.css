@@ -1,0 +1,305 @@
+.clear-fix:after {
+  content: "";
+  display: table;
+    clear: both;
+}
+
+body {
+    min-height:100%;
+    background-color: #263238;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: center;
+}
+
+
+.space-bot{
+  margin-bottom: 35px;
+}
+
+.space-top{
+  margin-top: 35px;
+}
+
+.mainInfo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    clear: both;
+    position:relative;
+    height:auto;
+}
+.info1{
+    float:left;
+    width: 90px;
+    color: #6dc793;
+}
+.info2{
+    float: left;
+    max-width: 560px;
+    clear: right;
+    height:100%;
+}
+.backButton{
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.uploadBut{
+    float: right;
+    padding-top: 17px;
+}
+.bottomPart{
+    clear: both;
+    padding-top: 10px;
+}
+
+.headerSessions{
+    clear:both;
+    display: inline;
+    vertical-align: middle;
+}
+
+.headerMeas{
+    float: left;
+}
+
+.headerItems{
+    clear:both;
+}
+.filesDiv{
+    clear:both;
+}
+
+.backButton:hover{
+    background: #263239; 
+}
+
+/* Title */
+
+.allSessions{
+    padding-top: 10px;
+    clear:both;
+    overflow-y:auto;
+    max-height: 200px;
+}
+
+.eachSession{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+.eachSession:hover{
+    background: #263239; 
+}
+
+
+.projectName{
+    
+    float: left;
+    width: 70%;
+}
+
+.positionCentre{
+    text-align:center;
+}
+.downloadDivision{
+    float:right;
+    padding-top: 24px;
+    
+}
+
+.afdsf{
+    text-align:center;
+}
+
+.center{
+    margin: auto;
+}
+.paddingTopBot{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+
+
+h1 {
+    color: white;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 25px;
+    text-align: left;
+}
+
+a {
+color: #ffffff;
+}
+
+
+h2 {
+    color: white;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: left;
+}
+
+/* Sign Up */
+
+.container {
+    
+    width: 700px;
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+
+
+.alert-danger{
+	text-align: center;
+}
+
+.signup-screen {
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+    background-color: #2c3940;
+    box-shadow: 0 1px 6px rgba(0,0,0,.3);
+    color: white;
+}
+
+.btn{
+  border-radius: 2px;
+}
+
+.cancel{
+  background-color: #df405a;
+}
+
+.done{
+  background-color: #5CAB7D;
+}
+
+.done:hover{
+  background-color: #6dc793;
+}
+
+.done:focus{
+  background-color: #6dc793;
+}
+
+.divider2{
+    border-top: 1px solid #6dc793;
+}
+
+.cancel:hover{
+  background-color: #f0435f;
+}
+
+.cancel:focus{
+  background-color: #f0435f;
+}
+
+.input-group {
+    width:100%;
+}
+
+.input-group .ng-invalid {
+    border: 2px solid #e74c3c;
+    border-radius: 3px;
+}
+
+/* Error Box */
+
+.imageAddS{
+    max-height: 12px;
+    
+}
+
+
+
+
+
+#info
+{
+	font-size: 18px;
+	color: #555;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+
+
+.scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+.headerItems{
+    padding-top: 10px;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+.fileImage{
+    width: 40px;
+    height: 20px;
+}
+.eachFile{
+    float:left;
+    padding-right: 10px;
+}
+
+
+/*
+ *  STYLE 9
+ */
+
+#style-9::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #263238;
+}
+
+#style-9::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #263238;
+}
+
+#style-9::-webkit-scrollbar-thumb
+{
+	background-color: #6dc793;	
+	background-image: -webkit-linear-gradient(90deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+

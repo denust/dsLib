@@ -1,0 +1,148 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>HMS Studies</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+      <link rel="stylesheet" href="{% static 'article/css/article.css' %}">
+
+  
+</head>
+
+<body>
+  <body ng-controller="RegisterCtrl" ng-app="myApp">
+ <div class="container">
+   <div id="signup">
+      <div class="signup-screen">
+         <div class = "topPart">
+            <div class = "backButton">
+                <a href="/study/"> Back to Studies</a>
+             </div>
+             <div class = "projectName">
+                <h1>{{id}} </h1>
+             </div>
+                
+                {% if sessions.0 %}
+                <a href="/study/analysis?id={{id}}">
+                    <div class = "downloadDivision">
+                        <label for="files" class="btn">Analysis</label>
+                        <button style="visibility:hidden;"> 
+                        </button>
+                    </div>
+                </a>
+             	{% endif %}   
+             
+                {% if sessions.0 %}
+                <a href="/study/download_study?id={{id}}">
+                    <div class = "downloadDivision">
+                        <label for="files" class="btn">Download</label>
+                        <button style="visibility:hidden;"> 
+                        </button>
+                    </div>
+                </a>
+             	{% endif %}
+             
+         </div>
+          
+            <div class = "mainInfo">
+
+                
+
+                Just  example template, we pass variables like this {{someShit}}
+
+
+                <div class = "info1"> 
+                    ID:<br>
+                    Title:<br>
+                    Description:<br>
+                </div>
+                <div class = "info2"> 
+                    {{study.1}} <br>
+                    {{study.3}} <br>
+                    {{study.4}} <br>
+                </div>
+            </div>
+          
+          <div class = "bottomPart">
+            <div class="divider"></div>
+              
+              
+              <div class = "headerSessions">
+                  <div class = "headerMeas"><h2>Measurement sessions ({{ sessions|length }})</h2></div>
+                  
+                <div class = "uploadBut">
+                    <a href="/study/add_session?id={{study.0}}">
+                        <label for="files" class="btn">Add a session</label>
+                        <button style="visibility:hidden;"> 
+                        </button>
+                   </a>
+                </div>
+            </div>
+             
+          <div class = "allSessions" id="style-9">
+                  {% if sessions.0 %}
+              <div class="divider2"></div> 
+                  {% endif %}
+                  {% for session in sessions%}
+
+                  <div class = "eachSession">
+                      Date added: {{session.2}}<br>
+                      Panellist id: {{session.0}}<br>
+                      Product: {{session.1}}<br>
+
+                  </div>
+                  <div class="divider2"></div> 
+                {%endfor%}
+              
+          </div>
+          
+              
+          <div class = "headerItems">
+              <div class="divider"></div>
+              <div class = "headerMeas"><h2>Attached files ({{ files|length }})</h2></div>
+          </div>
+              
+          <div class = "filesDiv">
+              
+              {% for file in files%}
+                <a href="{% static file.3 %}" download="file">
+                  <div class = "eachFile">
+                      <img  src="{% static 'study/img/file.png' %}" height="42" width="32">
+                      {{file.1}}
+                  </div>
+                </a>
+            {%endfor%}
+              
+                
+                <a href='/study/add_file?id={{study.0}}'>
+                        <label for="files" class="btn">Add a file</label>
+                        <button style="visibility:hidden;"> 
+                        </button>
+                   </a>
+          </div>
+              
+          
+          </div>
+          
+           </div>
+        </div>
+    </div>
+</body>
+  <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js'></script>
+
+    <script  src="{% static 'study/js/study.js' %}"></script>
+    
+    
+
+</body>
+</html>
