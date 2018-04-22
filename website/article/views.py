@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import db_connections
+from db_connections import *
 
 
 def index(request):
@@ -12,6 +12,13 @@ def index(request):
 # otherwise it won't load
 
 def get_article(request, article_id):
-    print(article_id)
-    someShit = str(article_id) + ' is a bad number'
-    return render(request, 'article/article.html', {'id' : article_id, 'someShit':someShit})
+    article = find_article(cursor,conn,article_id)
+    article_body = article[1].replace(r'\n', '<br>')
+    try:
+        upload_date = article[2]
+        author = article[3]
+    except:
+        upload_date = 'not yet'
+        author = 'no one'
+    return render(request, 'article/article.html', {'id' : article_id, 'article_body' :article_body, 'upload_date': upload_date,
+                                                    'author':author} )
