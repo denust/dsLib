@@ -13,7 +13,7 @@ def connect_to_db():
     cursor = conn.cursor()
     return cursor, conn
 
-cursor,conn = connect_to_db()
+#cursor,conn = connect_to_db()
 
 # Need to add primary keys and autoincrementing shit later maybe
 def make_articles_table(cursor, conn):
